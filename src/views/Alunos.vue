@@ -24,16 +24,19 @@ import ArgonButton from "@/components/ArgonButton.vue";
             </div>
           </div>
 
-          <div class="col-lg-4">
-            
-            <div class="card-body pt-4 p-3 d-flex flex-row justify-content-between">
+          <div class="col-lg-3">
+            <div class="card-body pt-4 p-3 d-flex flex-row justify-content-around">
               <argon-button
                 color="info"
                 size="md"
                 class="d-flex align-items-left justify-content-center "
                 ><h6 class="mt-1">+ Cadastrar Aluno</h6>
               </argon-button>
-              
+            </div>
+          </div>
+          
+          <div class="col-lg-3">
+            <div class="card-body pt-4 p-3 d-flex flex-row justify-content-around">
               <argon-button
                 color="info"
                 size="md"
