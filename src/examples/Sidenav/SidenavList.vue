@@ -93,10 +93,11 @@ const getRoute = () => {
         </sidenav-item>
       </li>
 
-      <a href="https://github.com/JulioCout/esporte_back" target="_blank">
+      
         <li class="nav-item">
           <sidenav-item
-            to=""
+            to="//github.com/JulioCout/esporte_back"
+            target="_blank"
             :class="getRoute() === 'signin' ? 'active' : ''"
             navText="Backend de exemplo"
           >
@@ -105,7 +106,7 @@ const getRoute = () => {
             </template>
           </sidenav-item>
         </li>
-      </a>
+      
 
     </ul>
   </div>

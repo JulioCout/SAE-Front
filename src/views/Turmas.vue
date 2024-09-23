@@ -28,7 +28,7 @@ import ArgonButton from "@/components/ArgonButton.vue";
             </div>
           </div>
 
-          <div class="col-lg-3">
+          <div class="col-lg-2">
             <div class="card-body pt-4 p-3 d-flex flex-row justify-content-around">
               <argon-button
                 color="info"
@@ -39,7 +39,7 @@ import ArgonButton from "@/components/ArgonButton.vue";
             </div>
           </div>
           
-          <div class="col-lg-3">
+          <div class="col-lg-2">
             <div class="card-body pt-4 p-3 d-flex flex-row justify-content-around">
               <argon-button
                 color="info"

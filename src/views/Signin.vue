@@ -97,7 +97,7 @@ onBeforeUnmount(() => {
                   background-size: cover;
                 "
               >
-                <span class="mask bg-gradient-success opacity-6"></span>
+                <span class="mask bg-gradient-info opacity-6"></span>
                 <h4
                   class="mt-5 text-white font-weight-bolder position-relative"
                 >

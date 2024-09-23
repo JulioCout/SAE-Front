@@ -44,7 +44,7 @@ onBeforeUnmount(() => {
           margin-left: -34%;
         "
       >
-        <span class="mask bg-gradient-success opacity-6"></span>
+        <span class="mask bg-gradient-info opacity-6"></span>
       </div>
       <div class="card shadow-lg mt-n6">
         <div class="card-body p-3">
