@@ -28,22 +28,23 @@ import ArgonButton from "@/components/ArgonButton.vue";
             </div>
           </div>
 
-          <div class="col-lg-2">
+          <div class="col-lg-3">
             <div class="card-body pt-4 p-3 d-flex flex-row justify-content-around">
               <argon-button
                 color="info"
                 size="md"
-                class="d-flex align-items-left justify-content-center "
+                fullWidth
                 ><h6 class="mt-1">+ Abrir Turma</h6>
               </argon-button>
             </div>
           </div>
           
-          <div class="col-lg-2">
+          <div class="col-lg-3">
             <div class="card-body pt-4 p-3 d-flex flex-row justify-content-around">
               <argon-button
                 color="info"
                 size="md"
+                fullWidth
                 ><h6 class="mt-1">+ Nova Inscrição</h6>
               </argon-button>
             </div>
