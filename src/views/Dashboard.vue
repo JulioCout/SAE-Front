@@ -1,8 +1,7 @@
 <script setup>
 import MiniStatisticsCard from "@/examples/Cards/MiniStatisticsCard.vue";
 import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
-import Carousel from "./components/Carousel.vue";
-import CategoriesList from "./components/CategoriesList.vue";
+import AtalhosCard from "@/views/components/AtalhosCard.vue"
 
 import US from "@/assets/img/icons/flags/US.png";
 import DE from "@/assets/img/icons/flags/DE.png";
@@ -11,31 +10,31 @@ import BR from "@/assets/img/icons/flags/BR.png";
 
 const sales = {
   us: {
-    country: "United States",
-    sales: 2500,
-    value: "$230,900",
-    bounce: "29.9%",
+    country: "Musculação",
+    sales: 320,
+    value: "R$ 19.000,00",
+    bounce: "R$ 60,00",
     flag: US,
   },
   germany: {
-    country: "Germany",
-    sales: "3.900",
-    value: "$440,000",
-    bounce: "40.22%",
+    country: "Pilates",
+    sales: "270",
+    value: "R$ 13.500,00",
+    bounce: "R$ 50,00",
     flag: DE,
   },
   britain: {
-    country: "Great Britain",
-    sales: "1.400",
-    value: "$190,700",
-    bounce: "23.44%",
+    country: "Natação",
+    sales: "220",
+    value: "R$ 8.800,00",
+    bounce: "R$ 40,00",
     flag: GB,
   },
   brasil: {
-    country: "Brasil",
-    sales: "562",
-    value: "$143,960",
-    bounce: "32.14%",
+    country: "Hidroginástica",
+    sales: "150",
+    value: "R$ 6.000,00",
+    bounce: "R$ 40,00",
     flag: BR,
   },
 };
@@ -44,14 +43,14 @@ const sales = {
   <div class="py-4 container-fluid">
     <div class="row">
       <div class="col-lg-12">
-        <div class="row">
+        <div class="row mb-3">
           <div class="col-lg-3 col-md-6 col-12">
             <mini-statistics-card
-              title="Today's Money"
-              value="$53,000"
+              title="Receita de Setembro"
+              value="R$ 13.270,00"
               description="<span
                 class='text-sm font-weight-bolder text-success'
-                >+55%</span> since yesterday"
+                >+12%</span> em relação a Agosto"
               :icon="{
                 component: 'ni ni-money-coins',
                 background: 'bg-gradient-primary',
@@ -61,13 +60,13 @@ const sales = {
           </div>
           <div class="col-lg-3 col-md-6 col-12">
             <mini-statistics-card
-              title="Today's Users"
-              value="2,300"
+              title="Ocupação de Professores"
+              value="68%"
               description="<span
-                class='text-sm font-weight-bolder text-success'
-                >+3%</span> since last week"
+                class='text-sm font-weight-bolder text-danger'
+                >-3%</span> em relação a Agosto"
               :icon="{
-                component: 'ni ni-world',
+                component: 'ni ni-chart-bar-32',
                 background: 'bg-gradient-danger',
                 shape: 'rounded-circle',
               }"
@@ -75,11 +74,11 @@ const sales = {
           </div>
           <div class="col-lg-3 col-md-6 col-12">
             <mini-statistics-card
-              title="New Clients"
-              value="+3,462"
+              title="Novos Alunos"
+              value="+23"
               description="<span
-                class='text-sm font-weight-bolder text-danger'
-                >-2%</span> since last quarter"
+                class='text-sm font-weight-bolder text-success'
+                >+2%</span> em relação a Agosto"
               :icon="{
                 component: 'ni ni-paper-diploma',
                 background: 'bg-gradient-success',
@@ -89,13 +88,13 @@ const sales = {
           </div>
           <div class="col-lg-3 col-md-6 col-12">
             <mini-statistics-card
-              title="Sales"
-              value="$103,430"
+              title="Vagas Disponíveis"
+              value="14"
               description="<span
                 class='text-sm font-weight-bolder text-success'
-                >+5%</span> than last month"
+                >-5%</span> do que agosto"
               :icon="{
-                component: 'ni ni-cart',
+                component: 'ni ni-book-bookmark',
                 background: 'bg-gradient-warning',
                 shape: 'rounded-circle',
               }"
@@ -103,38 +102,37 @@ const sales = {
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-7 mb-lg">
+          <div class="col-lg-8 mb-lg">
             <!-- line chart -->
             <div class="card z-index-2">
               <gradient-line-chart
                 id="chart-line"
-                title="Sales Overview"
+                title="Acompanhamento de Receita"
                 description="<i class='fa fa-arrow-up text-success'></i>
       <span class='font-weight-bold'>4% more</span> in 2021"
                 :chart="{
                   labels: [
-                    'Apr',
-                    'May',
+                    'Jan',
+                    'Fev',
+                    'Mar',
+                    'Abr',
                     'Jun',
                     'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec',
+                    'Ago',
+                    'Set',
                   ],
                   datasets: [
                     {
                       label: 'Mobile Apps',
-                      data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                      data: [12800, 9700, 11800, 10500, 9400, 15000, 11000, 13270],
                     },
                   ],
                 }"
               />
             </div>
           </div>
-          <div class="col-lg-5">
-            <carousel />
+          <div class="col-lg-4">
+            <atalhos-card></atalhos-card>
           </div>
         </div>
         <div class="row mt-4">
@@ -142,7 +140,7 @@ const sales = {
             <div class="card">
               <div class="p-3 pb-0 card-header">
                 <div class="d-flex justify-content-between">
-                  <h6 class="mb-2">Sales by Country</h6>
+                  <h6 class="mb-2">Modalidades que mais arrecadam</h6>
                 </div>
               </div>
               <div class="table-responsive">
@@ -151,12 +149,9 @@ const sales = {
                     <tr v-for="(sale, index) in sales" :key="index">
                       <td class="w-30">
                         <div class="px-2 py-1 d-flex align-items-center">
-                          <div>
-                            <img :src="sale.flag" alt="Country flag" />
-                          </div>
                           <div class="ms-4">
                             <p class="mb-0 text-xs font-weight-bold">
-                              Country:
+                              Modalidade:
                             </p>
                             <h6 class="mb-0 text-sm">{{ sale.country }}</h6>
                           </div>
@@ -164,19 +159,19 @@ const sales = {
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="mb-0 text-xs font-weight-bold">Sales:</p>
+                          <p class="mb-0 text-xs font-weight-bold">Alunos:</p>
                           <h6 class="mb-0 text-sm">{{ sale.sales }}</h6>
                         </div>
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="mb-0 text-xs font-weight-bold">Value:</p>
+                          <p class="mb-0 text-xs font-weight-bold">Receita:</p>
                           <h6 class="mb-0 text-sm">{{ sale.value }}</h6>
                         </div>
                       </td>
                       <td class="text-sm align-middle">
                         <div class="text-center col">
-                          <p class="mb-0 text-xs font-weight-bold">Bounce:</p>
+                          <p class="mb-0 text-xs font-weight-bold">receita per capita:</p>
                           <h6 class="mb-0 text-sm">{{ sale.bounce }}</h6>
                         </div>
                       </td>
@@ -187,36 +182,7 @@ const sales = {
             </div>
           </div>
           <div class="col-lg-5">
-            <categories-list
-              :categories="[
-                {
-                  icon: {
-                    component: 'ni ni-mobile-button',
-                    background: 'dark',
-                  },
-                  label: 'Devices',
-                  description: '250 in stock <strong>346+ sold</strong>',
-                },
-                {
-                  icon: {
-                    component: 'ni ni-tag',
-                    background: 'dark',
-                  },
-                  label: 'Tickets',
-                  description: '123 closed <strong>15 open</strong>',
-                },
-                {
-                  icon: { component: 'ni ni-box-2', background: 'dark' },
-                  label: 'Error logs',
-                  description: '1 is active <strong>40 closed</strong>',
-                },
-                {
-                  icon: { component: 'ni ni-satisfied', background: 'dark' },
-                  label: 'Happy Users',
-                  description: '+ 430',
-                },
-              ]"
-            />
+            
           </div>
         </div>
       </div>

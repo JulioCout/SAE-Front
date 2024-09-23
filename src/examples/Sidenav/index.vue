@@ -32,7 +32,7 @@ const darkMode = computed(() => store.state.darkMode);
       ></i>
 
       <router-link class="m-0 navbar-brand" to="/">
-        <span class="ms-2 font-weight-bold me-2">SAE Demonstração</span>
+        <span class="ms-2 font-weight-bold me-2">Esporte Demonstração</span>
       </router-link>
     </div>
 

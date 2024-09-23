@@ -23,9 +23,9 @@ const getRoute = () => {
     <ul class="navbar-nav">
       <li class="nav-item">
         <sidenav-item
-          to="/dashboard-default"
-          :class="getRoute() === 'dashboard-default' ? 'active' : ''"
-          :navText="isRTL ? 'لوحة القيادة' : 'Inicio'"
+          to="/inicio"
+          :class="getRoute() === 'inicio' ? 'active' : ''"
+          navText="Inicio"
         >
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
@@ -37,7 +37,7 @@ const getRoute = () => {
         <sidenav-item
           to="/turmas"
           :class="getRoute() === 'tables' ? 'active' : ''"
-          :navText="isRTL ? 'الجداول' : 'Turmas'"
+          navText="Turmas"
         >
           <template v-slot:icon>
             <i
@@ -51,7 +51,7 @@ const getRoute = () => {
         <sidenav-item
           to="/alunos"
           :class="getRoute() === 'billing' ? 'active' : ''"
-          :navText="isRTL ? 'الفواتیر' : 'Alunos'"
+          navText="Alunos"
         >
           <template v-slot:icon>
             <i class="ni ni-single-02 text-success text-sm opacity-10"></i>
@@ -59,18 +59,7 @@ const getRoute = () => {
         </sidenav-item>
       </li>
 
-      <li class="nav-item">
-        <sidenav-item
-          to="/virtual-reality"
-          :class="getRoute() === 'virtual-reality' ? 'active' : ''"
-          :navText="isRTL ? 'الواقع الافتراضي' : 'Agenda'"
-        >
-          <template v-slot:icon>
-            <i class="ni ni-calendar-grid-58 text-info text-sm opacity-10"></i>
-          </template>
-        </sidenav-item>
-      </li>
-
+      
       <li class="mt-8 nav-item">
         <h6
           class="text-xs ps-4 text-uppercase font-weight-bolder opacity-6"

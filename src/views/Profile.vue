@@ -4,7 +4,7 @@ import { useStore } from "vuex";
 
 import setNavPills from "@/assets/js/nav-pills.js";
 import setTooltip from "@/assets/js/tooltip.js";
-import ProfileCard from "./components/ProfileCard.vue";
+
 import ArgonInput from "@/components/ArgonInput.vue";
 import ArgonButton from "@/components/ArgonButton.vue";
 
@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
       <div
         class="page-header min-height-300"
         style="
-          background-image: url(&quot;https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80&quot;);
+          background-image: url(&quot;https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);
           margin-right: -24px;
           margin-left: -34%;
         "
@@ -60,8 +60,8 @@ onBeforeUnmount(() => {
             </div>
             <div class="col-auto my-auto">
               <div class="h-100">
-                <h5 class="mb-1">Sayo Kravits</h5>
-                <p class="mb-0 font-weight-bold text-sm">Public Relations</p>
+                <h5 class="mb-1">Maria</h5>
+                <p class="mb-0 font-weight-bold text-sm">Público em Geral</p>
               </div>
             </div>
             <div
@@ -121,7 +121,7 @@ onBeforeUnmount(() => {
                           </g>
                         </g>
                       </svg>
-                      <span class="ms-1">App</span>
+                      <span class="ms-1">Matriculas</span>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -169,7 +169,7 @@ onBeforeUnmount(() => {
                           </g>
                         </g>
                       </svg>
-                      <span class="ms-1">Messages</span>
+                      <span class="ms-1">Atestados</span>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -222,7 +222,7 @@ onBeforeUnmount(() => {
                           </g>
                         </g>
                       </svg>
-                      <span class="ms-1">Settings</span>
+                      <span class="ms-1">Financeiro</span>
                     </a>
                   </li>
                 </ul>
@@ -238,46 +238,46 @@ onBeforeUnmount(() => {
           <div class="card">
             <div class="card-header pb-0">
               <div class="d-flex align-items-center">
-                <p class="mb-0">Edit Profile</p>
+                <p class="mb-0">Editar Perfil</p>
                 <argon-button color="success" size="sm" class="ms-auto"
-                  >Settings</argon-button
+                  >Editar</argon-button
                 >
               </div>
             </div>
             <div class="card-body">
-              <p class="text-uppercase text-sm">User Information</p>
+              <p class="text-uppercase text-sm">Informações do Aluno</p>
               <div class="row">
                 <div class="col-md-6">
                   <label for="example-text-input" class="form-control-label"
-                    >Username</label
+                    >Usuário</label
                   >
                   <argon-input type="text" value="lucky.jesse" />
                 </div>
                 <div class="col-md-6">
                   <label for="example-text-input" class="form-control-label"
-                    >Email address</label
+                    >E-mail</label
                   >
                   <argon-input type="email" value="jesse@example.com" />
                 </div>
                 <div class="col-md-6">
                   <label for="example-text-input" class="form-control-label"
-                    >First name</label
+                    >Primeiro Nome</label
                   >
-                  <input class="form-control" type="text" value="Jesse" />
+                  <input class="form-control" type="text" value="Maria" />
                 </div>
                 <div class="col-md-6">
                   <label for="example-text-input" class="form-control-label"
-                    >Last name</label
+                    >Sobrenome</label
                   >
                   <argon-input type="text" value="Lucky" />
                 </div>
               </div>
               <hr class="horizontal dark" />
-              <p class="text-uppercase text-sm">Contact Information</p>
+              <p class="text-uppercase text-sm">Informações de Contato</p>
               <div class="row">
                 <div class="col-md-12">
                   <label for="example-text-input" class="form-control-label"
-                    >Address</label
+                    >Endereço</label
                   >
                   <argon-input
                     type="text"
@@ -286,33 +286,41 @@ onBeforeUnmount(() => {
                 </div>
                 <div class="col-md-4">
                   <label for="example-text-input" class="form-control-label"
-                    >City</label
+                    >Cidade</label
                   >
                   <argon-input type="text" value="New York" />
                 </div>
                 <div class="col-md-4">
                   <label for="example-text-input" class="form-control-label"
-                    >Country</label
+                    >Bairro</label
                   >
                   <argon-input type="text" value="United States" />
                 </div>
                 <div class="col-md-4">
                   <label for="example-text-input" class="form-control-label"
-                    >Postal code</label
+                    >CEP</label
                   >
                   <argon-input type="text" value="437300" />
                 </div>
               </div>
-              <hr class="horizontal dark" />
-              <p class="text-uppercase text-sm">About me</p>
+              
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4">
                   <label for="example-text-input" class="form-control-label"
-                    >About me</label
+                    >Telefone 1</label
                   >
                   <argon-input
                     type="text"
-                    value="A beautiful Dashboard for Bootstrap 5. It is Free and Open Source."
+                    value=""
+                  />
+                </div>
+                <div class="col-md-4">
+                  <label for="example-text-input" class="form-control-label"
+                    >Telefone 2</label
+                  >
+                  <argon-input
+                    type="text"
+                    value=""
                   />
                 </div>
               </div>
@@ -320,7 +328,7 @@ onBeforeUnmount(() => {
           </div>
         </div>
         <div class="col-md-4">
-          <profile-card />
+          
         </div>
       </div>
     </div>
