@@ -93,6 +93,18 @@ const getRoute = () => {
         </sidenav-item>
       </li>
 
+      <li class="nav-item">
+        <sidenav-item
+          to="https://github.com/JulioCout/esporte_back"
+          :class="getRoute() === 'signin' ? 'active' : ''"
+          navText="Backend de exemplo"
+        >
+          <template v-slot:icon>
+            <i class="ni ni-single-copy-04 text-dark text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
+
     </ul>
   </div>
 
