@@ -3,14 +3,14 @@ import { computed } from "vue";
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 import Breadcrumbs from "../Breadcrumbs.vue";
-import { activateDarkMode, deactivateDarkMode } from "@/assets/js/dark-mode";
+
 
 
 const store = useStore();
 const isRTL = computed(() => store.state.isRTL);
 
 const route = useRoute();
-const setSidebarType = (type) => store.commit("sidebarType", type);
+
 
 const currentRouteName = computed(() => {
   return route.name;
@@ -22,18 +22,7 @@ const currentDirectory = computed(() => {
 
 
 
-const darkMode = () => {
-  if (store.state.darkMode) {
-    store.state.darkMode = false;
-    setSidebarType("bg-white");
-    deactivateDarkMode();
-    return;
-  } else {
-    store.state.darkMode = true;
-    setSidebarType("bg-default");
-    activateDarkMode();
-  }
-};
+
 
 
 </script>
@@ -73,19 +62,7 @@ const darkMode = () => {
           </li>
           
           
-          <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-            <div class="mt-2 mb-5 d-flex">
-              <span class="mb-0">Light / Dark</span>
-              <div class="form-check form-switch ps-0 ms-auto my-auto">
-                <input
-                  class="form-check-input mt-1 ms-auto"
-                  type="checkbox"
-                  :checked="store.state.darkMode"
-                  @click="darkMode"
-                />
-              </div>
-            </div>
-          </li>
+          
           
         </ul>
       </div>
